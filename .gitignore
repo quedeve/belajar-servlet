@@ -3,3 +3,9 @@ target/
 
 # mac ignore 
 DS_Store
+
+# intellij idea
+.idea/
+*.iml
+*.ipl
+*.iml
