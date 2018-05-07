@@ -15,7 +15,24 @@ public class ContohServlet extends HttpServlet {
         String kelas = req.getParameter("kelas");
         Integer umur = Integer.valueOf(req.getParameter("umur"));
         resp.getWriter().append("<html>" +
-                "<head><title>Belajar Kirim nilai</title></head>" +
+                "<head><title>Get Mapping</title></head>" +
+                "<body>" +
+                "   Nama Lengkap : " + namaLengkap + "<br/>" +
+                "   kelas : " + kelas + "<br/>" +
+                "   umur : " + umur + "<br/>" +
+                "</body>" +
+                "</html>");
+    }
+
+    @Override
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        String namaLengkap = req.getParameter("nama");
+        String kelas = req.getParameter("kelas");
+        Integer umur = Integer.valueOf(req.getParameter("umur"));
+
+
+        resp.getWriter().append("<html>" +
+                "<head><title>Post Mapping</title></head>" +
                 "<body>" +
                 "   Nama Lengkap : " + namaLengkap + "<br/>" +
                 "   kelas : " + kelas + "<br/>" +
