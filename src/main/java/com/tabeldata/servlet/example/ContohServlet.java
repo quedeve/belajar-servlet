@@ -12,7 +12,15 @@ public class ContohServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 //        super.doGet(req, resp);
         String namaLengkap = req.getParameter("nama");
-        String nim = req.getParameter("NPM");
-        resp.getWriter().append("Halo saya sedang belajar servlet, nama saya adalah " + namaLengkap + " dan nimnya adalah " + nim);
+        String kelas = req.getParameter("kelas");
+        Integer umur = Integer.valueOf(req.getParameter("umur"));
+        resp.getWriter().append("<html>" +
+                "<head><title>Belajar Kirim nilai</title></head>" +
+                "<body>" +
+                "   Nama Lengkap : " + namaLengkap + "<br/>" +
+                "   kelas : " + kelas + "<br/>" +
+                "   umur : " + umur + "<br/>" +
+                "</body>" +
+                "</html>");
     }
 }
